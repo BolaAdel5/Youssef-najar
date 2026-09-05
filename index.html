@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>يوسف النجار | تركيب وتجميع وأثاث بالرياض</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16213E;
+    --navy-2:#1F2E52;
+    --coral:#FF6B4A;
+    --coral-deep:#E24E30;
+    --yellow:#FFC93C;
+    --teal:#17B897;
+    --cream:#FFF8EC;
+    --paper:#FFFDF7;
+    --ink:#16213E;
+    --muted:#5B6478;
+    --white:#FFFFFF;
+    --line: rgba(22,33,62,0.1);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream); color:var(--ink);
+    font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:400;
+    line-height:1.7; overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{ font-family:'Baloo Bhaijaan 2', sans-serif; font-weight:700; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  button{font-family:inherit; cursor:pointer;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  :focus-visible{outline:3px solid var(--coral); outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;} }
+
+  /* ===== HEADER ===== */
+  header{position:sticky; top:0; z-index:60; background:rgba(255,248,236,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 24px; max-width:1180px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:44px; height:44px; border-radius:14px; background:var(--navy);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative;
+  }
+  .brand-mark svg{width:24px; height:24px;}
+  .brand-text{font-size:19px; font-weight:700; color:var(--navy);}
+  .brand-text span{display:block; font-family:'IBM Plex Sans Arabic',sans-serif; font-size:11px; font-weight:500; color:var(--muted);}
+  nav ul{list-style:none; display:flex; gap:26px; align-items:center;}
+  nav a{font-size:14.5px; font-weight:500; color:var(--navy); white-space:nowrap;}
+  nav a:hover{color:var(--coral-deep);}
+  .nav-call{
+    background:var(--coral); color:var(--white) !important; padding:11px 20px;
+    border-radius:12px; font-weight:700; font-size:14px; display:flex; align-items:center; gap:8px;
+  }
+  .nav-call:hover{background:var(--coral-deep);}
+  .nav-toggle{display:none; background:none; border:none; font-size:24px; color:var(--navy); line-height:1; padding:6px;}
+  @media(max-width:1060px){
+    nav ul{gap:16px;}
+    nav a{font-size:14px;}
+  }
+  @media(max-width:900px){
+    nav ul{
+      position:fixed; inset:64px 0 auto 0; background:var(--paper); flex-direction:column; align-items:stretch;
+      padding:20px 24px 26px; gap:6px; border-bottom:1px solid var(--line); box-shadow:0 18px 30px -18px rgba(22,33,62,0.25);
+      transform:translateY(-120%); transition:transform 0.3s ease; max-height:calc(100vh - 64px); overflow-y:auto;
+    }
+    nav ul.open{transform:translateY(0);}
+    nav ul li{width:100%;}
+    nav ul li a{display:block; padding:12px 4px; border-bottom:1px solid var(--line);}
+    nav ul li:last-child a{border-bottom:none;}
+    .nav-call{margin-top:10px; justify-content:center; padding:13px 20px;}
+    .nav-toggle{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{background:var(--navy); color:var(--white); position:relative; overflow:hidden; padding:64px 0 0;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:20px; align-items:center; position:relative; z-index:2;}
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08);
+    padding:8px 16px; border-radius:100px; font-size:13.5px; color:var(--yellow); font-weight:600; margin-bottom:22px;
+  }
+  .hero h1{font-size:clamp(34px,4.6vw,54px); line-height:1.22; margin-bottom:20px; max-width:13ch; color:var(--white);}
+  .hero p{font-size:17px; color:#C7CEE3; max-width:44ch; margin-bottom:30px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
+  .btn{display:inline-flex; align-items:center; gap:9px; padding:15px 26px; border-radius:14px; font-weight:700; font-size:15px; border:none; transition:transform 0.15s ease, background 0.15s ease;}
+  .btn-coral{background:var(--coral); color:var(--white);}
+  .btn-coral:hover{background:var(--coral-deep); transform:translateY(-2px);}
+  .btn-ghost{background:rgba(255,255,255,0.08); color:var(--white); border:1.5px solid rgba(255,255,255,0.25);}
+  .btn-ghost:hover{border-color:var(--yellow); color:var(--yellow);}
+
+  .hero-visual{position:relative; height:420px;}
+  .hero-photo{
+    position:absolute; top:14%; right:22%; width:230px; height:290px; border-radius:22px; overflow:hidden;
+    box-shadow:0 30px 50px -18px rgba(0,0,0,0.5); border:5px solid rgba(255,255,255,0.15);
+  }
+  .hero-photo img{width:100%; height:100%; object-fit:cover;}
+  .chip{
+    position:absolute; background:var(--white); color:var(--navy); border-radius:16px;
+    padding:14px 18px; font-weight:600; font-size:14.5px; display:flex; align-items:center; gap:10px;
+    box-shadow:0 14px 30px -10px rgba(0,0,0,0.35); animation:float 6s ease-in-out infinite;
+  }
+  .chip .dot{width:30px; height:30px; border-radius:9px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:15px;}
+  .chip-1{top:0; right:6%; background:var(--yellow); animation-delay:0s;}
+  .chip-1 .dot{background:rgba(22,33,62,0.12);}
+  .chip-2{top:22%; right:42%; animation-delay:1.2s;}
+  .chip-2 .dot{background:#FFE6DF; color:var(--coral-deep);}
+  .chip-3{top:46%; right:2%; background:var(--teal); color:var(--white); animation-delay:0.6s;}
+  .chip-3 .dot{background:rgba(255,255,255,0.22);}
+  .chip-4{top:64%; right:38%; animation-delay:1.8s;}
+  .chip-4 .dot{background:#FFF1C2; color:#8a6a00;}
+  .chip-5{top:86%; right:10%; background:var(--coral); color:var(--white); animation-delay:0.3s;}
+  .chip-5 .dot{background:rgba(255,255,255,0.22);}
+  @keyframes float{0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);}}
+  @media(max-width:860px){ .hero-grid{grid-template-columns:1fr;} .hero-visual{display:none;} }
+
+  .trust-strip{
+    position:relative; z-index:2; margin-top:44px; background:var(--navy-2);
+    border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .trust-inner{display:flex; justify-content:space-between; padding:26px 24px; max-width:1180px; margin:0 auto; flex-wrap:wrap; gap:18px;}
+  .trust-item{display:flex; align-items:center; gap:12px;}
+  .trust-num{font-size:26px; font-weight:800; color:var(--yellow);}
+  .trust-label{font-size:13.5px; color:#B9C1D9;}
+
+  /* ===== SECTIONS ===== */
+  .section{padding:88px 0;}
+  .section-head{max-width:600px; margin-bottom:46px;}
+  .section-tag{display:inline-block; background:#EAF7F3; color:#0C8F72; font-size:13px; font-weight:700; padding:6px 14px; border-radius:100px; margin-bottom:14px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px); line-height:1.28; color:var(--navy);}
+  .section-head p{color:var(--muted); font-size:16px; margin-top:12px;}
+
+  /* ===== SERVICES BENTO ===== */
+  .bento{display:grid; grid-template-columns:repeat(6,1fr); gap:16px;}
+  .b-card{border-radius:20px; padding:26px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; min-height:170px;}
+  .b-card h3{font-size:19px; margin-bottom:6px;}
+  .b-card p{font-size:14px; line-height:1.6;}
+  .b-icon{width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:14px;}
+  .b-icon svg{width:24px; height:24px;}
+  .b1{grid-column:span 3; grid-row:span 2; background:var(--navy); color:var(--white); min-height:360px;}
+  .b1 p{color:#C7CEE3;}
+  .b1 .b-icon{background:rgba(255,255,255,0.12); color:var(--yellow);}
+  .b2{grid-column:span 3; background:var(--coral); color:var(--white);}
+  .b2 .b-icon{background:rgba(255,255,255,0.2); color:var(--white);}
+  .b3{grid-column:span 3; background:var(--white); border:1px solid var(--line); color:var(--ink);}
+  .b3 .b-icon{background:#EAF7F3; color:#0C8F72;}
+  .b3 p{color:var(--muted);}
+  .b4{grid-column:span 2; background:var(--yellow); color:var(--navy);}
+  .b4 .b-icon{background:rgba(22,33,62,0.1); color:var(--navy);}
+  .b5{grid-column:span 2; background:var(--white); border:1px solid var(--line); color:var(--ink);}
+  .b5 .b-icon{background:#FFE6DF; color:var(--coral-deep);}
+  .b5 p{color:var(--muted);}
+  .b6{grid-column:span 2; background:var(--teal); color:var(--white);}
+  .b6 .b-icon{background:rgba(255,255,255,0.2); color:var(--white);}
+  .b7{grid-column:span 2; background:var(--white); border:1px solid var(--line); color:var(--ink);}
+  .b7 .b-icon{background:#EFEBFF; color:#6C4CE0;}
+  .b7 p{color:var(--muted);}
+  .b8{grid-column:span 2; background:var(--navy-2); color:var(--white);}
+  .b8 .b-icon{background:rgba(255,255,255,0.12); color:var(--yellow);}
+  .b9{grid-column:span 2; background:var(--white); border:1px solid var(--line); color:var(--ink);}
+  .b9 .b-icon{background:#FFF1C2; color:#8a6a00;}
+  .b9 p{color:var(--muted);}
+  @media(max-width:900px){
+    .bento{grid-template-columns:repeat(2,1fr);}
+    .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9{grid-column:span 2 !important; grid-row:auto !important; min-height:auto;}
+  }
+
+  /* ===== REAL PHOTO GALLERY ===== */
+  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:220px; gap:16px;}
+  .gph{position:relative; border-radius:18px; overflow:hidden;}
+  .gph img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease;}
+  .gph:hover img{transform:scale(1.06);}
+  .gph span{
+    position:absolute; right:0; bottom:0; left:0; padding:16px 16px 12px; color:var(--white); font-weight:700; font-size:14px;
+    background:linear-gradient(0deg, rgba(22,33,62,0.85), transparent);
+  }
+  .gph-a{grid-column:span 2; grid-row:span 2;}
+  @media(max-width:860px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:180px;}
+    .gph-a{grid-column:span 2; grid-row:span 1;}
+  }
+
+  /* ===== ABOUT ===== */
+  .about{display:grid; grid-template-columns:0.95fr 1.05fr; gap:56px; align-items:center;}
+  .about-card{
+    background:var(--white); border:1px solid var(--line); border-radius:24px; padding:36px;
+    position:relative;
+  }
+  .about-photo{
+    position:absolute; top:-22px; left:-22px; width:110px; height:110px; border-radius:16px; overflow:hidden;
+    border:5px solid var(--white); box-shadow:0 14px 26px -10px rgba(22,33,62,0.35); transform:rotate(-8deg); z-index:2;
+  }
+  .about-photo img{width:100%; height:100%; object-fit:cover;}
+  @media(max-width:500px){ .about-photo{display:none;} }
+  .bubble{
+    background:var(--yellow); border-radius:20px; padding:22px 24px; margin-bottom:24px;
+    font-size:17px; font-weight:600; color:var(--navy); position:relative;
+  }
+  .bubble::after{
+    content:""; position:absolute; bottom:-10px; right:34px; width:20px; height:20px;
+    background:var(--yellow); clip-path:polygon(0 0, 100% 0, 0 100%);
+  }
+  .about-card .row{display:flex; gap:14px; align-items:flex-start; margin-bottom:20px;}
+  .about-card .row:last-child{margin-bottom:0;}
+  .row-ic{width:34px; height:34px; border-radius:10px; background:#EAF7F3; color:#0C8F72; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-weight:800; font-size:14px;}
+  .row h4{font-size:16px; margin-bottom:3px;}
+  .row p{font-size:14.5px; color:var(--muted);}
+  .about-text p{color:var(--muted); font-size:16.5px; margin-bottom:16px;}
+  @media(max-width:860px){ .about{grid-template-columns:1fr;} }
+
+  /* ===== PROCESS (real sequence) ===== */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; position:relative;}
+  .step{background:var(--white); border:1px solid var(--line); border-radius:20px; padding:26px; position:relative;}
+  .step-num{
+    width:38px; height:38px; border-radius:11px; background:var(--navy); color:var(--yellow);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:16px; margin-bottom:16px;
+  }
+  .step h3{font-size:17.5px; margin-bottom:8px;}
+  .step p{font-size:14px; color:var(--muted);}
+  @media(max-width:860px){ .steps{grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .steps{grid-template-columns:1fr;} }
+
+  /* ===== BEFORE/AFTER SLIDER ===== */
+  .ba-wrap{background:var(--navy); border-radius:28px; padding:44px; display:grid; grid-template-columns:0.9fr 1.1fr; gap:40px; align-items:center; color:var(--white);}
+  .ba-wrap h2{color:var(--white); font-size:30px; margin-bottom:14px;}
+  .ba-wrap p{color:#C7CEE3; font-size:15.5px; margin-bottom:8px;}
+  .ba-slider{position:relative; border-radius:20px; overflow:hidden; aspect-ratio:4/3; user-select:none; touch-action:none;}
+  .ba-before, .ba-after{position:absolute; inset:0; display:flex; align-items:flex-end; padding:20px; font-weight:700; font-size:15px; color:var(--white);}
+  .ba-before{background:linear-gradient(140deg,#3a3a3a,#1a1a1a);}
+  .ba-after{background:linear-gradient(140deg,var(--teal),#0C8F72); clip-path:inset(0 50% 0 0);}
+  .ba-handle{position:absolute; top:0; bottom:0; right:50%; width:4px; background:var(--white); cursor:ew-resize;}
+  .ba-handle::after{
+    content:"⇔"; position:absolute; top:50%; right:50%; transform:translate(50%,-50%);
+    width:42px; height:42px; background:var(--white); color:var(--navy); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 6px 18px rgba(0,0,0,0.3);
+  }
+  @media(max-width:860px){ .ba-wrap{grid-template-columns:1fr;} }
+
+  /* ===== FAQ ===== */
+  .faq-list{max-width:760px;}
+  .faq-item{border-bottom:1px solid var(--line); padding:22px 0;}
+  .faq-q{display:flex; justify-content:space-between; align-items:center; gap:16px; font-weight:700; font-size:16.5px; color:var(--navy); background:none; border:none; width:100%; text-align:right; padding:0;}
+  .faq-q .plus{width:30px; height:30px; border-radius:9px; background:#EAF7F3; color:#0C8F72; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; transition:transform 0.25s ease;}
+  .faq-item.open .plus{transform:rotate(45deg); background:var(--coral); color:var(--white);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height 0.3s ease;}
+  .faq-item.open .faq-a{max-height:220px;}
+  .faq-a p{padding-top:14px; color:var(--muted); font-size:15px; max-width:60ch;}
+
+  /* ===== TESTIMONIALS ===== */
+  .testi-track{display:flex; gap:18px; overflow-x:auto; padding-bottom:10px; scroll-snap-type:x proximity;}
+  .testi-card{
+    flex:0 0 300px; scroll-snap-align:start; background:var(--white); border:1px solid var(--line);
+    border-radius:20px; padding:26px;
+  }
+  .testi-stars{color:var(--yellow); font-size:15px; margin-bottom:12px;}
+  .testi-card p{font-size:15px; color:var(--ink); margin-bottom:18px;}
+  .testi-person{font-weight:700; font-size:14.5px;}
+  .testi-role{font-size:13px; color:var(--muted);}
+
+  /* ===== CONTACT ===== */
+  .contact{background:var(--navy); border-radius:28px; overflow:hidden; display:grid; grid-template-columns:1fr 1fr; color:var(--white);}
+  .contact-info{padding:48px 44px;}
+  .contact-info h2{color:var(--white); font-size:30px; margin-bottom:14px;}
+  .contact-info p{color:#C7CEE3; font-size:15px; margin-bottom:28px;}
+  .c-detail{display:flex; gap:14px; align-items:center; margin-bottom:16px; font-size:14.5px;}
+  .c-ic{width:36px; height:36px; border-radius:10px; background:rgba(255,255,255,0.1); color:var(--yellow); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .contact-form{background:var(--paper); padding:48px 44px; color:var(--ink);}
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-size:13.5px; font-weight:700; color:var(--navy); margin-bottom:6px;}
+  .field input, .field textarea, .field select{
+    width:100%; border:1.5px solid var(--line); background:var(--white); padding:12px 14px;
+    border-radius:12px; font-family:inherit; font-size:14.5px; color:var(--ink);
+  }
+  .field textarea{resize:vertical; min-height:80px;}
+  .field input:focus, .field textarea:focus, .field select:focus{border-color:var(--coral);}
+  .submit-btn{width:100%; background:var(--coral); color:var(--white); border:none; padding:14px; border-radius:12px; font-weight:700; font-size:15.5px;}
+  .submit-btn:hover{background:var(--coral-deep);}
+  .form-note{font-size:13px; color:#0C8F72; margin-top:12px; text-align:center; font-weight:600;}
+  @media(max-width:860px){ .contact{grid-template-columns:1fr;} }
+
+  /* ===== FLOATING ACTION BUTTONS (تبقى ظاهرة دائمًا فوق كل المحتوى) ===== */
+  .fab-stack{position:fixed; bottom:22px; left:22px; z-index:200; display:flex; flex-direction:column; gap:12px;}
+  .fab{
+    position:relative; background:var(--teal); color:var(--white);
+    width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 26px -8px rgba(23,184,151,0.55); font-size:26px; flex-shrink:0;
+  }
+  .fab::before{
+    content:""; position:absolute; inset:0; border-radius:50%; background:inherit; opacity:0.55;
+    animation:pulseRing 2.2s ease-out infinite; z-index:-1;
+  }
+  .fab:hover{background:#0C8F72;}
+  .fab-call{background:var(--coral); box-shadow:0 12px 26px -8px rgba(226,78,48,0.55);}
+  .fab-call:hover{background:var(--coral-deep);}
+  @keyframes pulseRing{0%{transform:scale(1); opacity:0.5;} 100%{transform:scale(1.6); opacity:0;}}
+  @media (prefers-reduced-motion: reduce){ .fab::before{animation:none; display:none;} }
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy-2); color:#B9C1D9; padding:52px 0 100px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 0.9fr 0.9fr 1fr; gap:32px; padding-bottom:32px; border-bottom:1px solid rgba(255,255,255,0.1);}
+  .footer-grid h4{color:var(--white); font-size:15px; margin-bottom:14px;}
+  .footer-grid ul{list-style:none; display:grid; gap:10px;}
+  .footer-grid li{display:flex; align-items:center; gap:8px;}
+  .footer-grid a{font-size:14px; line-height:1.5;}
+  .footer-grid a:hover{color:var(--yellow);}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:20px; font-size:13px; flex-wrap:wrap; gap:10px;}
+  @media(max-width:760px){
+    .footer-grid{grid-template-columns:1fr 1fr; gap:28px 20px;}
+    .footer-bottom{flex-direction:column; align-items:flex-start;}
+  }
+  @media(max-width:480px){ .footer-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FFC93C" stroke-width="2" stroke-linecap="round"><path d="M14 4l6 6-9 9H5v-6z"/><path d="M12.5 5.5l6 6"/></svg>
+      </div>
+      <div class="brand-text">يوسف النجار<span>تركيب · تجميع · أثاث — الرياض</span></div>
+    </div>
+    <nav>
+      <ul id="navList">
+        <li><a href="#services">خدماتنا</a></li>
+        <li><a href="#gallery">معرض الأعمال</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+        <li><a href="#contact" class="nav-call">📞 اتصل الآن</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badge">⚡ فني يوصلك بنفس اليوم داخل الرياض</div>
+      <h1>تجميع، تركيب، وتفصيل... كل شغلات بيتك بفني وحد</h1>
+      <p>من تجميع أثاث إيكيا وتركيب الستائر، إلى فتح الأبواب وتركيب الأقفال الذكية — احجز وخلص شغلتك بدون ما تدوّر على أكثر من رقم.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-coral">📅 احجز فني الآن</a>
+        <a href="https://wa.me/966598085700" class="btn btn-ghost">واتساب مباشر</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo"><img src="https://images.unsplash.com/photo-1683115100623-5e872a9d533a?w=500&auto=format&fit=crop&q=70" alt="فني يستخدم مثقاب لتركيب قطعة خشبية" loading="lazy"></div>
+      <div class="chip chip-1"><span class="dot">🛋️</span> تجميع أثاث إيكيا</div>
+      <div class="chip chip-2"><span class="dot">🪟</span> تركيب ستائر</div>
+      <div class="chip chip-3"><span class="dot">🔑</span> أقفال ذكية</div>
+      <div class="chip chip-4"><span class="dot">🖼️</span> تركيب لوحات</div>
+      <div class="chip chip-5"><span class="dot">🚪</span> فتح أبواب</div>
+    </div>
+  </div>
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="trust-num">+1500</span><span class="trust-label">طلب منجز بالرياض</span></div>
+      <div class="trust-item"><span class="trust-num">نفس اليوم</span><span class="trust-label">سرعة الوصول للفني</span></div>
+      <div class="trust-item"><span class="trust-num">9</span><span class="trust-label">خدمات تركيب وتجميع</span></div>
+      <div class="trust-item"><span class="trust-num">%97</span><span class="trust-label">عملاء راضين</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">خدماتنا</span>
+      <h2>كل شغلة تركيب أو تجميع تحتاجها، بمكان واحد</h2>
+      <p>فني متكامل العدة يغطي أكثر طلبات البيت شيوعًا، من قطعة أثاث بسيطة إلى قفل إلكتروني كامل.</p>
+    </div>
+    <div class="bento">
+      <div class="b-card b1">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+        <h3>تجميع أثاث إيكيا</h3>
+        <p>تجميع أي قطعة إيكيا — دواليب، أسرّة، طاولات، مكاتب — بالعدة الصحيحة وبدون خدوش.</p>
+      </div>
+      <div class="b-card b2">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16"/><path d="M6 4c0 6-2 8-2 14"/><path d="M12 4c0 6-1 8-1 14"/><path d="M18 4c0 6 2 8 2 14"/></svg></div>
+        <h3>تركيب الستائر</h3>
+        <p>تركيب قضبان وسكك بجميع الأنواع، مع ضبط الميل والتثبيت المحكم على الحائط.</p>
+      </div>
+      <div class="b-card b3">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M20 15l-5-5-9 9"/></svg></div>
+        <h3>تركيب اللوحات</h3>
+        <p>تعليق اللوحات والمرايا بمحاذاة دقيقة ومسامير مناسبة لنوع الحائط.</p>
+      </div>
+      <div class="b-card b4">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6"/><path d="M3 18h18"/><path d="M6 10V7a2 2 0 012-2h8a2 2 0 012 2v3"/></svg></div>
+        <h3>تجميع الغرف</h3>
+        <p>سرير، دولاب، تسريحة — نجمّع الغرفة كاملة بجلسة واحدة.</p>
+      </div>
+      <div class="b-card b5">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L20 4"/><path d="M4 4h6M4 4v6"/><path d="M20 20h-6M20 20v-6"/></svg></div>
+        <h3>تفصيل الغرف</h3>
+        <p>ترتيب وضبط القطع بما يناسب مساحة الغرفة واستخدامها اليومي.</p>
+      </div>
+      <div class="b-card b6">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div>
+        <h3>فتح الأبواب المغلقة</h3>
+        <p>فتح الأبواب المقفلة أو العالقة بدون كسر، سواء نسيت المفتاح أو تعطّل القفل.</p>
+      </div>
+      <div class="b-card b7">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/><path d="M12 14a5 5 0 015-5"/><path d="M12 14a7 7 0 017-7"/></svg></div>
+        <h3>صيانة الأقفال الذكية</h3>
+        <p>تركيب وبرمجة الأقفال الذكية من الصفر، وصيانة الأقفال القائمة.</p>
+      </div>
+      <div class="b-card b8">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/><circle cx="12" cy="15" r="1.5"/></svg></div>
+        <h3>الأقفال الإلكترونية</h3>
+        <p>تركيب أقفال البصمة والرمز والريموت مع شرح الاستخدام كامل.</p>
+      </div>
+      <div class="b-card b9">
+        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-4a4 4 0 014-4h8a4 4 0 014 4v4"/><path d="M4 18h16"/><path d="M6 10V8a2 2 0 012-2h8a2 2 0 012 2v2"/></svg></div>
+        <h3>تركيب وتعديل الأثاث</h3>
+        <p>تركيب أي قطعة جاهزة أو معدّلة حسب الطلب، حتى بالمساحات الضيقة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about-card">
+      <div class="about-photo"><img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=240&auto=format&fit=crop&q=70" alt="عدة أدوات الفني" loading="lazy"></div>
+      <div class="bubble">"وصل الفني قبل الموعد بربع ساعة، وخلص تجميع غرفة كاملة بأقل من ساعتين."</div>
+      <div class="row"><span class="row-ic">1</span><div><h4>تسعير واضح قبل البدء</h4><p>تعرف التكلفة على الهاتف قبل ما يوصل الفني.</p></div></div>
+      <div class="row"><span class="row-ic">2</span><div><h4>ضمان على كل شغلة</h4><p>أي خلل بعد التركيب نرجع نصلحه بدون تكلفة إضافية.</p></div></div>
+      <div class="row"><span class="row-ic">3</span><div><h4>عدة كاملة بالسيارة</h4><p>ما تحتاج توفر أدوات، الفني يجيك بكل شي يلزم.</p></div></div>
+    </div>
+    <div class="about-text">
+      <span class="section-tag">من نحن</span>
+      <h2 style="font-size:32px; color:var(--navy); margin-bottom:16px;">فني بيتك اللي ما يخيّب</h2>
+      <p>"يوسف النجار" فني تركيب وتجميع منزلي في الرياض، يوصلك بعدته الكاملة لأي شغلة داخل البيت بدون ما تدوّر على أكثر من فني لكل مهمة.</p>
+      <p>الحجز سهل عبر الاتصال أو واتساب، والفني يوصل بالموعد المتفق عليه وينهي الشغلة بنفس الزيارة في أغلب الحالات.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">طريقة الحجز</span>
+      <h2>أربع خطوات وشغلتك خلصت</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">١</div><h3>تواصل معنا</h3><p>اتصل أو راسلنا على واتساب واشرح لنا الشغلة المطلوبة.</p></div>
+      <div class="step"><div class="step-num">٢</div><h3>نحدد السعر والموعد</h3><p>تعرف التكلفة التقريبية ونتفق على وقت يناسبك.</p></div>
+      <div class="step"><div class="step-num">٣</div><h3>يوصل الفني</h3><p>يوصلك بعدته الكاملة وينفذ الشغلة في موقعك.</p></div>
+      <div class="step"><div class="step-num">٤</div><h3>فحص وضمان</h3><p>فحص نهائي معك، وضمان مكتوب على العمل المنجز.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">معرض حقيقي</span>
+      <h2>لمحات من شغلات نفّذناها فعليًا</h2>
+      <p>صور حقيقية من طبيعة الخدمات اللي نقدمها — من الأدوات إلى النتيجة النهائية.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gph gph-a"><img src="https://images.unsplash.com/photo-1754557409214-3112479a1934?w=700&auto=format&fit=crop&q=70" alt="غرفة نوم بعد التجميع والتفصيل" loading="lazy"><span>تجميع وتفصيل غرفة نوم</span></div>
+      <div class="gph gph-b"><img src="https://images.unsplash.com/photo-1744690049441-c3baf1ef2aeb?w=500&auto=format&fit=crop&q=70" alt="تركيب ستائر بمقاس مضبوط" loading="lazy"><span>تركيب ستائر</span></div>
+      <div class="gph gph-c"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=500&auto=format&fit=crop&q=70" alt="تركيب قفل ذكي على الباب" loading="lazy"><span>تركيب قفل ذكي</span></div>
+      <div class="gph gph-d"><img src="https://images.unsplash.com/photo-1683115100623-5e872a9d533a?w=500&auto=format&fit=crop&q=70" alt="تجميع قطعة أثاث بالمثقاب" loading="lazy"><span>تجميع أثاث إيكيا</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="ba-wrap">
+      <div>
+        <span class="section-tag" style="background:rgba(255,255,255,0.1); color:var(--yellow);">شاهد الفرق</span>
+        <h2>من فوضى إلى ترتيب بزيارة وحدة</h2>
+        <p>حرّك السهم يمين ويسار عشان تشوف شكل الغرفة قبل وبعد ما يوصل الفني.</p>
+        <p style="color:var(--yellow); font-weight:700; margin-top:16px;">مثال حقيقي: تجميع وتفصيل غرفة نوم كاملة</p>
+      </div>
+      <div class="ba-slider" id="baSlider">
+        <div class="ba-before"><span>قبل — قطع متفرقة وصناديق</span></div>
+        <div class="ba-after" id="baAfter"><span>بعد — غرفة مجمّعة ومرتبة</span></div>
+        <div class="ba-handle" id="baHandle"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">آراء العملاء</span>
+      <h2>ماذا يقول من طلبوا خدماتنا</h2>
+    </div>
+    <div class="testi-track">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>جمّع لنا غرفة إيكيا كاملة بسرعة ودقة، وما ترك ولا برغي زايد!</p><div class="testi-person">أم فيصل</div><div class="testi-role">حي الملقا</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>ركّب لي قفل بصمة على باب الشقة وشرح لي طريقة الاستخدام بالتفصيل.</p><div class="testi-person">سعد العتيبي</div><div class="testi-role">حي النرجس</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>فتح لي باب غرفتي المقفل بدون ما يكسر شي، وسعره كان معقول جدًا.</p><div class="testi-person">نورة القحطاني</div><div class="testi-role">حي الياسمين</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>ركّب الستائر بمقاس مضبوط 100%، وحتى نظف المكان بعد ما خلص.</p><div class="testi-person">خالد الدوسري</div><div class="testi-role">حي الروضة</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">الأسئلة الشائعة</span>
+      <h2>عندك سؤال؟ غالبًا جاوبنا عليه هنا</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">كم تكلفة تجميع أثاث إيكيا؟ <span class="plus">+</span></button>
+        <div class="faq-a"><p>السعر يعتمد على نوع القطعة وحجمها وعددها، نعطيك تسعيرة واضحة بمجرد ما ترسل لنا التفاصيل.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">هل تفتحون الأبواب بدون كسر؟ <span class="plus">+</span></button>
+        <div class="faq-a"><p>نعم، نستخدم أدوات مخصصة لفتح أغلب أنواع الأقفال بدون أي تلف بالباب أو القفل.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">كم يستغرق تركيب القفل الذكي؟ <span class="plus">+</span></button>
+        <div class="faq-a"><p>عادة بين 30 إلى 60 دقيقة، حسب نوع الباب والقفل، ويشمل الشرح الكامل للاستخدام والبرمجة.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">هل تخدمون كل أحياء الرياض؟ <span class="plus">+</span></button>
+        <div class="faq-a"><p>نغطي أغلب أحياء الرياض، تواصل معنا وحدد لنا موقعك ونأكد لك الوصول بنفس اليوم.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">هل يوجد ضمان على الشغل؟ <span class="plus">+</span></button>
+        <div class="faq-a"><p>نعم، كل خدماتنا مضمونة — أي خلل يظهر بعد التركيب نرجع نصلحه بدون أي تكلفة إضافية.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div class="contact-info">
+        <h2>احجز فنيك الآن</h2>
+        <p>عبّي النموذج أو تواصل معنا مباشرة، وفريقنا يرد عليك بسرعة.</p>
+        <div class="c-detail"><span class="c-ic">☎</span> 966598085700+</div>
+        <div class="c-detail"><span class="c-ic">✉</span> info@yousef-najjar.sa</div>
+        <div class="c-detail"><span class="c-ic">📍</span> الرياض — نخدم جميع الأحياء</div>
+        <div class="c-detail"><span class="c-ic">🕐</span> يوميًا 8 صباحًا – 11 مساءً</div>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="field"><label for="name">الاسم</label><input id="name" type="text" placeholder="اسمك الكامل" required></div>
+          <div class="field"><label for="phone">رقم الجوال</label><input id="phone" type="tel" placeholder="05XXXXXXXX" required></div>
+          <div class="field"><label for="service">نوع الخدمة</label>
+            <select id="service">
+              <option>تجميع أثاث إيكيا</option>
+              <option>تركيب ستائر</option>
+              <option>تركيب لوحات</option>
+              <option>تجميع غرف</option>
+              <option>تفصيل غرف</option>
+              <option>فتح باب</option>
+              <option>قفل ذكي / إلكتروني</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="field"><label for="msg">تفاصيل الطلب</label><textarea id="msg" placeholder="اكتب لنا تفاصيل الشغلة والحي"></textarea></div>
+          <button type="submit" class="submit-btn">إرسال الطلب</button>
+          <p class="form-note" id="formNote">نرد عليك خلال دقائق</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fab-stack">
+  <a href="https://wa.me/966598085700" class="fab" aria-label="راسلنا على واتساب">💬</a>
+  <a href="tel:+966598085700" class="fab fab-call" aria-label="اتصل بنا الآن">📞</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-text" style="color:var(--white); margin-bottom:10px;">يوسف النجار</div>
+        <p style="font-size:14px; max-width:32ch;">فني تركيب وتجميع منزلي في الرياض — كل شغلة بيتك بفني واحد وضمان مكتوب.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#gallery">معرض الأعمال</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#process">طريقة الحجز</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="#services">تجميع أثاث إيكيا</a></li>
+          <li><a href="#services">تركيب ستائر ولوحات</a></li>
+          <li><a href="#services">فتح الأبواب المغلقة</a></li>
+          <li><a href="#services">أقفال ذكية وإلكترونية</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li>📞 <a href="tel:+966598085700">966598085700+</a></li>
+          <li>💬 <a href="https://wa.me/966598085700">واتساب مباشر</a></li>
+          <li>✉ <a href="mailto:info@yousef-najjar.sa">info@yousef-najjar.sa</a></li>
+          <li>📍 <span>الرياض — نخدم جميع الأحياء</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 يوسف النجار. جميع الحقوق محفوظة.</span>
+      <span>الرياض، المملكة العربية السعودية</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navList.classList.toggle('open');
+    navToggle.textContent = isOpen ? '✕' : '☰';
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navList.classList.remove('open');
+    navToggle.textContent = '☰';
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Before/After slider
+  const slider = document.getElementById('baSlider');
+  const handle = document.getElementById('baHandle');
+  const after = document.getElementById('baAfter');
+  let dragging = false;
+  function setPos(clientX){
+    const rect = slider.getBoundingClientRect();
+    let pct = ((clientX - rect.left) / rect.width) * 100;
+    pct = Math.max(4, Math.min(96, pct));
+    const fromRight = 100 - pct;
+    handle.style.right = fromRight + '%';
+    after.style.clipPath = `inset(0 ${fromRight}% 0 0)`;
+  }
+  handle.addEventListener('pointerdown', () => dragging = true);
+  window.addEventListener('pointerup', () => dragging = false);
+  window.addEventListener('pointermove', e => { if(dragging) setPos(e.clientX); });
+  slider.addEventListener('click', e => setPos(e.clientX));
+
+  // Contact form
+  const form = document.getElementById('contactForm');
+  const note = document.getElementById('formNote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    note.textContent = 'تم استلام طلبك، سنتواصل معك قريبًا بإذن الله ✓';
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
